@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LeadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [WelcomeController::class,'index']);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/lead/add', [LeadController::class, 'create']);
 
 Auth::routes();
 
