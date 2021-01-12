@@ -58,9 +58,7 @@ export default {
     components: {
         Layout
     },
-    created() {
-        this.lead = this.leadProp
-    },
+
     data() {
         return {
             lead: {
@@ -72,9 +70,13 @@ export default {
             }
         }
     },
+    created() {
+        this.lead = this.leadProp
+    },
     methods: {
         async handleSubmit() {
             let response = await this.$inertia.post('/leads/update', this.lead)
+            form.reset()
         }
     }
 }

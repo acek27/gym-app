@@ -16,7 +16,8 @@
                         </div>
                         <div class="form-group">
                             <label for="package">Interested Package</label>
-                            <input type="text" class="form-control" placeholder="Enter package" v-model="lead.interested_package"
+                            <input type="text" class="form-control" placeholder="Enter package"
+                                   v-model="lead.interested_package"
                                    id="package" tabindex="5">
                         </div>
 
@@ -25,7 +26,7 @@
 
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="email" class="form-control" placeholder="Enter email" v-model="lead.email"
+                            <input type="text" class="form-control" placeholder="Enter email" v-model="lead.email"
                                    id="email" tabindex="2">
                         </div>
 
@@ -56,13 +57,13 @@ export default {
     },
     data() {
         return {
-            lead: {
+            lead: this.$inertia.form({
                 name: '',
                 email: '',
                 phone: '',
                 dob: '',
                 package: '',
-            }
+            })
         }
     },
     methods: {

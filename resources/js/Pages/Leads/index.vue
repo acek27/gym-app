@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Leas</h1>
+                    <h1>Leads</h1>
                 </div>
             </div>
             <div class="row">
@@ -15,7 +15,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
-                            <th>DOB</th>
+                            <th>Age</th>
                             <th>Package</th>
                             <th>Added On</th>
                             <th></th>
@@ -27,7 +27,7 @@
                             <td>{{ lead.name }}</td>
                             <td>{{ lead.email }}</td>
                             <td>{{ lead.phone }}</td>
-                            <td>{{ lead.dob }}</td>
+                            <td>{{ lead.age }}</td>
                             <td>{{ lead.interested_package }}</td>
                             <td>{{ lead.created_at }}</td>
                             <td>

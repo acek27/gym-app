@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lead;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -42,14 +43,16 @@ class LeadController extends Controller
     {
         $postData = $this->validate($request, $this->validation);
 
+        $dob = Carbon::parse($postData['dob']);
+
         Lead::create([
             'name' => $postData['name'],
             'email' => $postData['email'],
-            'dob' => $postData['dob'],
+            'dob' => $dob,
             'phone' => $postData['phone'],
             'interested_package' => $postData['interested_package'],
             'branch_id' => 1,
-            'age' => 1,
+            'age' => $dob->age,
             'added_by' => Auth::user()->id,
         ]);
 
@@ -66,6 +69,7 @@ class LeadController extends Controller
         $rules = $this->validation;
         $rules['id'] = 'required|exists:leads';
         $postData = $this->validate($request, $rules);
+        $postData['age']= Carbon::parse($postData['dob'])->age;
 
         $lead = Lead::find($postData['id']);
         $lead->update($postData);

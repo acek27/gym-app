@@ -2984,6 +2984,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2991,13 +2992,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   data: function data() {
     return {
-      lead: {
+      lead: this.$inertia.form({
         name: '',
         email: '',
         phone: '',
         dob: '',
         "package": ''
-      }
+      })
     };
   },
   methods: {
@@ -3107,9 +3108,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   components: {
     Layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__.default
   },
-  created: function created() {
-    this.lead = this.leadProp;
-  },
   data: function data() {
     return {
       lead: {
@@ -3120,6 +3118,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         "package": ''
       }
     };
+  },
+  created: function created() {
+    this.lead = this.leadProp;
   },
   methods: {
     handleSubmit: function handleSubmit() {
@@ -3136,8 +3137,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
+                form.reset();
 
-              case 3:
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -40016,7 +40018,7 @@ var render = function() {
                   ],
                   staticClass: "form-control",
                   attrs: {
-                    type: "email",
+                    type: "text",
                     placeholder: "Enter email",
                     id: "email",
                     tabindex: "2"
@@ -40347,7 +40349,7 @@ var render = function() {
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [_c("h1", [_vm._v("Leas")])])
+        _c("div", { staticClass: "col-md-12" }, [_c("h1", [_vm._v("Leads")])])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
@@ -40363,7 +40365,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("th", [_vm._v("Phone")]),
                 _vm._v(" "),
-                _c("th", [_vm._v("DOB")]),
+                _c("th", [_vm._v("Age")]),
                 _vm._v(" "),
                 _c("th", [_vm._v("Package")]),
                 _vm._v(" "),
@@ -40385,7 +40387,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(lead.phone))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.dob))]),
+                  _c("td", [_vm._v(_vm._s(lead.age))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(lead.interested_package))]),
                   _vm._v(" "),
