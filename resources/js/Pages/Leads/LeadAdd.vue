@@ -53,11 +53,6 @@ export default {
     components: {
         Layout
     },
-    methods: {
-        handleSubmit() {
-
-        }
-    },
     data() {
         return {
             lead: {
@@ -67,6 +62,11 @@ export default {
                 dob: '',
                 package: '',
             }
+        }
+    },
+    methods: {
+        async handleSubmit() {
+            let response = await this.$inertia.post('/lead/save', this.lead)
         }
     }
 }

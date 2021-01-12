@@ -22,6 +22,7 @@ class CreateLeadsTable extends Migration
             $table->string('interested_package');
             $table->date('dob');
             $table->unsignedBigInteger('branch_id');
+            $table->unsignedBigInteger('added_by');
             $table->timestamps();
         });
     }

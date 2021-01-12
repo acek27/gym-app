@@ -22,8 +22,9 @@ use App\Http\Controllers\LeadController;
 
 Route::get('/', [WelcomeController::class,'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dash');
 Route::get('/lead/add', [LeadController::class, 'create']);
+Route::post('/lead/save', [LeadController::class, 'store']);
 
 Auth::routes();
 
