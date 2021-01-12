@@ -3,6 +3,8 @@ require('./bootstrap');
 import {App, plugin} from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 
+Vue.prototype.$route = route
+
 Vue.use(plugin)
 
 const app = document.getElementById('app')

@@ -16,7 +16,8 @@
                         </div>
                         <div class="form-group">
                             <label for="package">Interested Package</label>
-                            <input type="text" class="form-control" placeholder="Enter package" v-model="lead.interested_package"
+                            <input type="text" class="form-control" placeholder="Enter package"
+                                   v-model="lead.interested_package"
                                    id="package" tabindex="5">
                         </div>
 
@@ -51,8 +52,14 @@
 import Layout from "../../Shared/Layout";
 
 export default {
+    props: {
+        leadProp: Object
+    },
     components: {
         Layout
+    },
+    created() {
+        this.lead = this.leadProp
     },
     data() {
         return {
@@ -67,7 +74,7 @@ export default {
     },
     methods: {
         async handleSubmit() {
-            let response = await this.$inertia.post('/leads/save', this.lead)
+            let response = await this.$inertia.post('/leads/update', this.lead)
         }
     }
 }

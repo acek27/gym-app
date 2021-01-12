@@ -20,11 +20,18 @@ use App\Http\Controllers\LeadController;
 //    return view('welcome');
 //});
 
-Route::get('/', [WelcomeController::class,'index']);
+Route::get('/', [WelcomeController::class, 'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dash');
-Route::get('/lead/add', [LeadController::class, 'create']);
-Route::post('/lead/save', [LeadController::class, 'store']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dash');
+    Route::get('/leads/list', [LeadController::class, 'index'])->name('lead.list');
+
+    Route::get('/leads/add', [LeadController::class, 'create']);
+    Route::post('/leads/save', [LeadController::class, 'store']);
+
+    Route::get('/leads/view/{lead}', [LeadController::class, 'view'])->name('lead.view');
+    Route::post('/leads/update', [LeadController::class, 'update']);
+});
 
 Auth::routes();
 
