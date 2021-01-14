@@ -2985,6 +2985,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3100,6 +3112,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -3137,9 +3174,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                form.reset();
 
-              case 4:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -3164,6 +3200,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Shared/Layout */ "./resources/js/Shared/Layout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -39890,207 +39934,219 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              return _vm.handleSubmit($event)
-            }
-          }
-        },
-        [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.name,
-                      expression: "lead.name"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter name",
-                    id: "name",
-                    tabindex: "1"
-                  },
-                  domProps: { value: _vm.lead.name },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("h5", [_vm._v("Lead Detail")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.handleSubmit($event)
+                }
+              }
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.name,
+                          expression: "lead.name"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter name",
+                        id: "name",
+                        tabindex: "1"
+                      },
+                      domProps: { value: _vm.lead.name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "name", $event.target.value)
+                        }
                       }
-                      _vm.$set(_vm.lead, "name", $event.target.value)
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "phone" } }, [_vm._v("Phone")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.phone,
-                      expression: "lead.phone"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter phone",
-                    id: "phone",
-                    tabindex: "3"
-                  },
-                  domProps: { value: _vm.lead.phone },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "phone" } }, [_vm._v("Phone")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.phone,
+                          expression: "lead.phone"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter phone",
+                        id: "phone",
+                        tabindex: "3"
+                      },
+                      domProps: { value: _vm.lead.phone },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "phone", $event.target.value)
+                        }
                       }
-                      _vm.$set(_vm.lead, "phone", $event.target.value)
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "package" } }, [
-                  _vm._v("Interested Package")
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "package" } }, [
+                      _vm._v("Interested Package")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.interested_package,
+                          expression: "lead.interested_package"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter package",
+                        id: "package",
+                        tabindex: "5"
+                      },
+                      domProps: { value: _vm.lead.interested_package },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.lead,
+                            "interested_package",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.interested_package,
-                      expression: "lead.interested_package"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter package",
-                    id: "package",
-                    tabindex: "5"
-                  },
-                  domProps: { value: _vm.lead.interested_package },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "email" } }, [
+                      _vm._v("E-mail")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.email,
+                          expression: "lead.email"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "email",
+                        placeholder: "Enter email",
+                        id: "email",
+                        tabindex: "2"
+                      },
+                      domProps: { value: _vm.lead.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "email", $event.target.value)
+                        }
                       }
-                      _vm.$set(
-                        _vm.lead,
-                        "interested_package",
-                        $event.target.value
-                      )
-                    }
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "email" } }, [_vm._v("E-mail")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.email,
-                      expression: "lead.email"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter email",
-                    id: "email",
-                    tabindex: "2"
-                  },
-                  domProps: { value: _vm.lead.email },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "dob" } }, [
+                      _vm._v("Birthday")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.dob,
+                          expression: "lead.dob"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "date",
+                        placeholder: "Enter dob",
+                        id: "dob",
+                        tabindex: "4"
+                      },
+                      domProps: { value: _vm.lead.dob },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "dob", $event.target.value)
+                        }
                       }
-                      _vm.$set(_vm.lead, "email", $event.target.value)
-                    }
-                  }
-                })
+                    })
+                  ])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "dob" } }, [_vm._v("Birthday")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.dob,
-                      expression: "lead.dob"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "date",
-                    placeholder: "Enter dob",
-                    id: "dob",
-                    tabindex: "4"
-                  },
-                  domProps: { value: _vm.lead.dob },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.lead, "dob", $event.target.value)
-                    }
-                  }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-md-12" },
-              [
-                _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("Save")
-                ]),
-                _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
                 _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-warning",
-                    attrs: { href: _vm.$route("lead.list") }
-                  },
-                  [_vm._v("Back")]
+                  "div",
+                  { staticClass: "col-md-12" },
+                  [
+                    _c("button", { staticClass: "btn btn-success" }, [
+                      _vm._v("Save")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "inertia-link",
+                      {
+                        staticClass: "btn btn-warning",
+                        attrs: { href: _vm.$route("lead.list") }
+                      },
+                      [_vm._v("Back\n                            ")]
+                    )
+                  ],
+                  1
                 )
-              ],
-              1
-            )
-          ])
-        ]
-      )
+              ])
+            ]
+          )
+        ])
+      ])
     ])
   ])
 }
@@ -40119,207 +40175,235 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              return _vm.handleSubmit($event)
-            }
-          }
-        },
-        [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.name,
-                      expression: "lead.name"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter name",
-                    id: "name",
-                    tabindex: "1"
-                  },
-                  domProps: { value: _vm.lead.name },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("h5", [_vm._v("Lead Detail")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.handleSubmit($event)
+                }
+              }
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.name,
+                          expression: "lead.name"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter name",
+                        id: "name",
+                        tabindex: "1"
+                      },
+                      domProps: { value: _vm.lead.name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "name", $event.target.value)
+                        }
                       }
-                      _vm.$set(_vm.lead, "name", $event.target.value)
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "phone" } }, [_vm._v("Phone")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.phone,
-                      expression: "lead.phone"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter phone",
-                    id: "phone",
-                    tabindex: "3"
-                  },
-                  domProps: { value: _vm.lead.phone },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "phone" } }, [_vm._v("Phone")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.phone,
+                          expression: "lead.phone"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter phone",
+                        id: "phone",
+                        tabindex: "3"
+                      },
+                      domProps: { value: _vm.lead.phone },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "phone", $event.target.value)
+                        }
                       }
-                      _vm.$set(_vm.lead, "phone", $event.target.value)
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "package" } }, [
-                  _vm._v("Interested Package")
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "package" } }, [
+                      _vm._v("Interested Package")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.interested_package,
+                          expression: "lead.interested_package"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Enter package",
+                        id: "package",
+                        tabindex: "5"
+                      },
+                      domProps: { value: _vm.lead.interested_package },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.lead,
+                            "interested_package",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.interested_package,
-                      expression: "lead.interested_package"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Enter package",
-                    id: "package",
-                    tabindex: "5"
-                  },
-                  domProps: { value: _vm.lead.interested_package },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "email" } }, [
+                      _vm._v("E-mail")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.email,
+                          expression: "lead.email"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "email",
+                        placeholder: "Enter email",
+                        id: "email",
+                        tabindex: "2"
+                      },
+                      domProps: { value: _vm.lead.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "email", $event.target.value)
+                        }
                       }
-                      _vm.$set(
-                        _vm.lead,
-                        "interested_package",
-                        $event.target.value
-                      )
-                    }
-                  }
-                })
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "dob" } }, [
+                      _vm._v("Birthday")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.lead.dob,
+                          expression: "lead.dob"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "date",
+                        placeholder: "Enter dob",
+                        id: "dob",
+                        tabindex: "4"
+                      },
+                      domProps: { value: _vm.lead.dob },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.lead, "dob", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-md-12" },
+                  [
+                    _c("button", { staticClass: "btn btn-success" }, [
+                      _vm._v("Save")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "inertia-link",
+                      {
+                        staticClass: "btn btn-warning",
+                        attrs: { href: _vm.$route("lead.list") }
+                      },
+                      [_vm._v("Back\n                            ")]
+                    )
+                  ],
+                  1
+                )
               ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", [_vm._v("Reminders")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "email" } }, [_vm._v("E-mail")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.email,
-                      expression: "lead.email"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "email",
-                    placeholder: "Enter email",
-                    id: "email",
-                    tabindex: "2"
-                  },
-                  domProps: { value: _vm.lead.email },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.lead, "email", $event.target.value)
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "dob" } }, [_vm._v("Birthday")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lead.dob,
-                      expression: "lead.dob"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "date",
-                    placeholder: "Enter dob",
-                    id: "dob",
-                    tabindex: "4"
-                  },
-                  domProps: { value: _vm.lead.dob },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.lead, "dob", $event.target.value)
-                    }
-                  }
-                })
-              ])
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", [_vm._v("This is where the reminders come.")])
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-md-12" },
-              [
-                _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("Save")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass: "btn btn-warning",
-                    attrs: { href: _vm.$route("lead.list") }
-                  },
-                  [_vm._v("Back")]
-                )
-              ],
-              1
-            )
           ])
-        ]
-      )
+        ])
+      ])
     ])
   ])
 }
@@ -40352,97 +40436,115 @@ var render = function() {
         _c("div", { staticClass: "col-md-12" }, [_c("h1", [_vm._v("Leads")])])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("table", { staticClass: "table table-bordered bg-white" }, [
-            _c("thead", [
-              _c("tr", [
-                _c("th", [_vm._v("ID")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Name")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Email")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Phone")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Age")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Package")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Added On")]),
-                _vm._v(" "),
-                _c("th")
-              ])
-            ]),
-            _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _c(
+          "div",
+          { staticClass: "card-header" },
+          [
             _c(
-              "tbody",
-              _vm._l(_vm.leads, function(lead) {
-                return _c("tr", { key: lead.id }, [
-                  _c("td", [_vm._v(_vm._s(lead.id))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.name))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.email))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.phone))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.age))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.interested_package))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(lead.created_at))]),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "inertia-link",
-                        {
-                          attrs: {
-                            href: _vm.$route("lead.view", { lead: lead })
-                          }
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "bi bi-box-arrow-right",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                width: "16",
-                                height: "16",
-                                fill: "currentColor",
-                                viewBox: "0 0 16 16"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              }),
-              0
+              "inertia-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { href: _vm.$route("lead.add") }
+              },
+              [_vm._v("Add\n                    Data\n                ")]
             )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("table", { staticClass: "table table-bordered" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("ID")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Email")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Phone")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Age")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Package")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Added On")]),
+                  _vm._v(" "),
+                  _c("th")
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                _vm._l(_vm.leads, function(lead) {
+                  return _c("tr", { key: lead.id }, [
+                    _c("td", [_vm._v(_vm._s(lead.id))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.name))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.email))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.phone))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.age))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.interested_package))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(lead.created_at))]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      [
+                        _c(
+                          "inertia-link",
+                          {
+                            attrs: {
+                              href: _vm.$route("lead.view", { lead: lead })
+                            }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "bi bi-box-arrow-right",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "currentColor",
+                                  viewBox: "0 0 16 16"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                }),
+                0
+              )
+            ])
           ])
         ])
       ])

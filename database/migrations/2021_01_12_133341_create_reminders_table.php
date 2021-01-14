@@ -14,8 +14,16 @@ class CreateRemindersTable extends Migration
     public function up()
     {
         Schema::create('reminders', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('lead_id');
+            $table->unsignedBigInteger('user_id');
+            $table->text('reminder')->nullable();
+            $table->text('note')->nullable();
+            $table->string('status');
+            $table->date('reminder_date')->nullable();
             $table->timestamps();
+
+            $table->index(['lead_id']);
         });
     }
 

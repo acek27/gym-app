@@ -29,8 +29,7 @@ class LeadController extends Controller
 
     protected function index()
     {
-        $leads = Lead::query()->where('branch_id', 1)
-            ->orderByDesc('id')->get();
+        $leads = Lead::query()->where('branch_id', 1)->latest()->get();
         return Inertia::render('Leads/index', ['leads' => $leads]);
     }
 
@@ -61,6 +60,7 @@ class LeadController extends Controller
 
     public function view(Lead $lead)
     {
+        $lead->load(['reminders']);
         return Inertia::render('Leads/LeadView', ['lead-prop' => $lead]);
     }
 
@@ -73,7 +73,7 @@ class LeadController extends Controller
 
         $lead = Lead::find($postData['id']);
         $lead->update($postData);
-        return redirect()->route('lead.view', ['lead' => $lead]);
+        return redirect()->route('lead.list');
 
     }
 
