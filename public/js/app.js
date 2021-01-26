@@ -3137,6 +3137,41 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -40391,19 +40426,112 @@ var render = function() {
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _c("h5", [_vm._v("Reminders")])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("p", [_vm._v("This is where the reminders come.")])
+      _vm.lead.reminders.length > 0
+        ? _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("div", { staticClass: "card-header" }, [
+                  _c("h5", [_vm._v("Reminders")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "ul",
+                    { staticClass: "list-group list-group-flush" },
+                    _vm._l(_vm.lead.reminders, function(reminder) {
+                      return _c(
+                        "li",
+                        {
+                          key: reminder.id,
+                          staticClass: "list-group-item list-group-item-action"
+                        },
+                        [
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _vm._v(_vm._s(reminder.reminder))
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-2" }, [
+                              _vm._v(_vm._s(reminder.reminder_date))
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-2" }, [
+                              _vm._v(_vm._s(reminder.status))
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "col-md-2" },
+                              [
+                                _c(
+                                  "inertia-link",
+                                  {
+                                    staticClass: "float-right",
+                                    attrs: { href: "#" }
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "bi bi-box-arrow-right",
+                                        attrs: {
+                                          xmlns: "http://www.w3.org/2000/svg",
+                                          width: "16",
+                                          height: "16",
+                                          fill: "currentColor",
+                                          viewBox: "0 0 16 16"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "fill-rule": "evenodd",
+                                            d:
+                                              "M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("path", {
+                                          attrs: {
+                                            "fill-rule": "evenodd",
+                                            d:
+                                              "M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ])
+              ])
             ])
           ])
-        ])
-      ])
+        : _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("div", { staticClass: "card-header" }, [
+                  _c("h5", [_vm._v("Reminders")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("button", { staticClass: "btn btn-primary" }, [
+                    _vm._v(
+                      "\n                            Add new reminder\n                        "
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
     ])
   ])
 }

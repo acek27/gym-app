@@ -10,4 +10,9 @@ class Reminder extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function getStatusAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }
