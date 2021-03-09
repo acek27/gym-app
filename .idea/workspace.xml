@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa6d48d2-6067-4f80-9a95-ebff1feef7fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_1_11_21__8_47_AM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gym-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gym-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="aa6d48d2-6067-4f80-9a95-ebff1feef7fb" name="Default Changelist" comment="upgrade composer">
+      <change afterPath="$PROJECT_DIR$/public/js/particle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -177,11 +173,18 @@
       <option name="presentableId" value="Default" />
       <updated>1615165913303</updated>
       <workItem from="1615165923313" duration="1097000" />
-      <workItem from="1615170838867" duration="1233000" />
+      <workItem from="1615170838867" duration="6441000" />
+      <workItem from="1615254689893" duration="100000" />
+      <workItem from="1615255204610" duration="109000" />
+      <workItem from="1615255554538" duration="4174000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upgrade composer" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade composer" />
   </component>
 </project>
